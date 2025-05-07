@@ -1,0 +1,158 @@
+*Constructor : Constructor are used for initialize the object ,every class there will be Default constructor, when ever we create an object constructor will be called then the object will be created , constructor having class name or method properties
+
+*Static block:-
+public class q2{
+    public static void main(String[] args) {
+        day1 d1=new day1();
+        day1 d2=new day1();
+    }
+}
+public class day1 {
+    static {
+        System.out.println("static block");
+    }
+    day1(){
+        System.out.println("Constructor");
+    }
+}
+we created two objects two times call the constructor.
+Static block will be created with a  static keyword , it will call automatically no need to call with either object or class.
+
+*Static Method :- For static method no need to call with object you can directly call with class
+here static will act as instance or object
+
+class Main {
+    public static void main(String[] args) {
+        Student obj = new Student();
+        obj.setmarks(50.55f); // pass float with 'f'
+        float res = obj.getmarks();
+        obj.setDhiraj("Hello i am dhiraj");// get float, not int
+        String s=obj.getDhiraj();
+        System.out.println(res);
+        System.out.println(s);
+    }
+}
+
+class Student {
+    int age;
+
+    void setage(int age1) {
+        this.age = age1;
+    }
+
+    int getage() {
+        return age;
+    }
+
+    String Dhiraj;
+
+    void setDhiraj(String Dhiraj1) {
+        this.Dhiraj = Dhiraj1;
+    }
+
+    String getDhiraj() {
+        return Dhiraj;
+    }
+
+    float marks;
+
+    void setmarks(float v) {
+        this.marks = v;
+    }
+
+    float getmarks() {
+        return marks;
+    }
+
+    static boolean passOut;
+
+    void setPassOut(boolean status) {
+        passOut = status;
+    }
+
+    boolean isPassOut() {
+        return passOut;
+    }
+}
+
+*Fibonacci recursion example**
+public class Main{
+    public static int fib(int n){
+        if(n==0  ){
+            return  0;
+        }
+        else if(n==1){
+            return 1;
+        }
+        if(n<2){
+            return n;
+        }
+        else{
+            return fib(n-1)+fib(n-2);
+        }
+    }
+    public static void main(String[]args){
+        int result=fib(10);
+        System.out.println(result);
+        
+    }
+}
+
+*HCF (Highest Common Factor) using recursion*
+class Main{
+    public static int hcf(int a, int b){
+        if(b==0){
+            return a;
+        }
+        else{
+            return hcf(b,a%b);
+        }
+    }
+    public static void main(String[]args){
+        int result=hcf(18,17);
+        System.out.println(result);
+    }
+}
+
+** If else ,if else ladder , switch case **
+Conditional statement are used to the check condition and to print the relevant block in constant time 
+example :
+pseudo code
+if(condition){
+//code
+}
+else{
+        }
+
+
+** Control Statement*
+when we know the range  prefer to use for loop and when we dont' know the range we use while loop
+class Main{
+    class person {
+        int []arr ={1,2,3,4,5};
+        for(int i=0; i<n; i++){
+            return arr[i];
+        }
+        
+    }
+}
+control statement example 
+class Main{
+    public static void main(String[]args){
+    int a=5;
+    for(int i=1; i<=5; i++){
+        System.out.println(a+"*"+i+"="+a*i);
+    }
+   int b=10;
+   int i=1;
+   while( i<=10){
+       
+        System.out.println(b+"*"+i+"="+b*i);
+         i++;
+   }
+   
+}
+}
+
+
+
