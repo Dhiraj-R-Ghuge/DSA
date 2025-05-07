@@ -1,1 +1,15 @@
+Call method :
+writing a function  inside a class is called method.
+Method statement :- Declartinon ,Defination, call
+Declartion ,defination should be outside main class
+calling should be inside main class inside main method 
 
+Syntax:
+function type function name (parameter){
+derclation ,defination}
+above should be inside main class and main method 
+function name(argunments) calling it should be inside main class and main method.
+
+function type :
+except void for remaining types we have to return the data.for void we have to print the data
+Except void remaining all are the datat type then having same defualt values
