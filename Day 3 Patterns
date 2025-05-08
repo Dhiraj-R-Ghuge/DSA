@@ -1,0 +1,8 @@
+For loop:
+there are 3 types of solution for any problem
+1)brute force
+2)patters
+3)optimal
+
+for brute force most of the solution can be uisng written  two loop.(loop inside loop)
+time complexity because a o(n^2)
