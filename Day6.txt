@@ -1,0 +1,75 @@
+2D Array
+
+2d array consists of rows and columns.
+syntax-  int arr[][]=new int[][];
+
+the very first square bracket represent number of rows and second bracket represents columns.
+while declaring the array we have to declare number of rows and column numbers are optional.
+
+each row acts as a individual array
+
+eg- public class Main{
+      public static void main(String args[]){
+       Scanner sc=new Scanner(System.in);
+      
+       Scanner sc=new Scanner(System.in);
+        int arr[][]=new int[3][2];
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr[i].length;j++){
+                arr[i][j]=sc.nextInt();
+            }
+        }
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr[i].length;j++){
+                System.out.print(arr[i][j]+" ");
+            }
+            System.out.println();
+        }
+          }
+       }
+      }
+    }
+
+public class Array2D {
+    public static void main(String args[]){
+        int a=2;
+        int b=3;
+        a=a+b;
+        b=a-b;
+        a=a-b;
+        System.out.println(a+" "+b);
+    }
+}
+
+public class Array2D {
+    public static void main(String args[]){
+        int arr[]={1,2,3,4,5};
+        int target=5;
+        System.out.println(checkElement(arr,target));   //linear search
+    }
+
+    public static boolean checkElement(int arr[], int target){
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]==target){
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+
+public class Array2D {
+    public static void main(String args[]){
+        int arr[][]={{8,2,3},{2,3,4}};
+        int sum=0;
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr[i].length;j++){
+                sum+=arr[i][j];
+            }
+        }
+        System.out.println(sum);
+    }
+}
+
+//Consucutive numbers

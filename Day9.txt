@@ -1,0 +1,68 @@
+**Recursion**
+1)From a given string we have to remove string using recursion ?
+*Assume that we are starting with two string, input and output string .At initial output string is empty.
+*We have few steps those are 
+*Take the first character from the string and store in character variable 
+check the variable with our target character.
+*If it matches just return the output .string else append the character to the output string
+*Next slice the string by one character .
+*To get the particular character from a string we use charAt()method*
+*To slice we use substring.
+
+\\\\\Example/////
+"Hello" 		" "
+"ello"			"H"
+"llo"			"H"
+"lo"			"HL"
+"o"			"Hll"
+" "			"hllo"
+
+* Whenever input string empty we stop recursion that is our base case.
+********Recursive Function of String ************
+ static String skip(String str){
+        if(str.isEmpty()){
+            return "";
+        }
+        char ch=str.charAt(0);
+        if(ch == 'e'){
+            return skip(str.substring(1));
+            
+        }
+        else{
+            return ch + skip(str.substring(1));
+        }
+    }
+
+from a given string skip a word and print rest of the character
+class Main {
+    static String skip(String str) {
+        if (str.isEmpty()) {
+            return "";
+        }
+        if (str.startsWith("hello")) { // Changed to lowercase
+            return skip(str.substring(5)); // skip 5 characters
+        } else {
+            char ch = str.charAt(0);
+            return ch + skip(str.substring(1));
+        }
+    }
+
+    public static void main(String[] args) {
+        String input = "asdfgrhello there";
+        String result = skip(input);
+        System.out.println("Original string: " + input);
+        System.out.println("After skipping 'hello': " + result);
+    }
+}
+
+
+from the given string you have to skip he ?
+
+
+Two pointer approach 
+step 1:- initialize the pointers according to questions 
+step 2:- if your starting first pointer first index second pointer last index whenever both pointer crosses each other break he loop in between r=to the relevant operation 
+
+reverse an array?
+
+

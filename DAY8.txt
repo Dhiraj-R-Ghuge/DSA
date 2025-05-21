@@ -1,0 +1,47 @@
+*** Recursion**
+Function call and itself till it reads  based condition 
+there are two types in recursion 
+1)function calling same function itself and itself
+2)function calling another function 
+if we didn't mention based condition properly will get and exception for stack overflow
+
+recursion are use to break the code 
+
+question 
+(5!4!3!2!1!)
+Factorial code
+for every recursive call elements will be push into the stack after reaching based condition elements will be top.
+(5,4,3,2,1) all this value push into stack 
+
+fact(n){
+if(n==0 ){
+return 1;}
+else return n*fact(n-1);
+
+Fibonacci series 
+public class Main{
+    public static int fib(int n){
+        if(n==0  ){
+            return  0;
+        }
+        else if(n==1){
+            return 1;
+        }
+        if(n<2){
+            return n;
+        }
+        else{
+            return fib(n-1)+fib(n-2);
+        }
+    }
+    public static void main(String[]args){
+        int result=fib(10);
+        System.out.println(result);
+        
+    }
+}
+
+
+in java don't have pointers so we can't use reference that java is pass by value 
+
+reverse an array? using two pointers

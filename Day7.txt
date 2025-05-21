@@ -1,0 +1,59 @@
+Stock question dynamic programming
+int []prices ={7,1,5,3,6,4};
+int mini = prices[0];
+int MaxProfit=0;
+int prices.length;
+for(int i=1; i<n; i++){
+int profit =prices[i] -mini;
+Maxprofit =Math.max(Maxprofit,profit);
+mini =Math.min(,prices[i]);
+}
+System.out.println(MaxProfit);
+}
+
+
+**Arraylist***
+
+ Array having fixing size so once we declare we cant change the size either increase or decrease to increase array size dynamically we have to use arraylist ia belong to collection framework.
+What is the framework ?
+ans :- framework is nothin but predefined method and will guide the program .
+
+ArrayList<Integer> leaders = new ArrayList<>();
+
+List<Wraper Class > ArrayListName = new ArrayList<>();
+List<Integer> leaders = new ArrayList<>();
+
+
+List is an interface and interface contains incomplete method wraper class  is not primitive data type .its a class and in collection we have to use wraper class
+
+<> is called genrics
+
+arraylist is class and it contains complete method 
+
+arraylist is a dynamic array is my array size is to I am trying to add start element the size will be double and it will copy previous element vice versa the array will become half(1/2)
+as arraylist is class you have to import the arraylist class  now we can access all the predefined method which consist in arraylist
+
+ 
+/////    sub arrays /////
+
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        long maxi=Long.MAX_VALUE;
+        long sum=0;
+        for (int i=0; i<n; i++){
+            sum+= arr[i];
+            if(sum>maxi){
+                maxi=sum;
+                
+            }
+            if (sum <0)
+            sum=0;
+        }
+        return maxi;
+    }
+}
