@@ -1,0 +1,64 @@
+Dutch National Flag
+Initialize 3 pointer 
+l at 0th index --> 
+m at 0th index --> 
+h at n-1 index -->
+the elements between m and h are unsorted 
+
+if arr[m] = 0 swap between arr[m] and arr[l]
+and increase m and increase l
+if arr[m]= 1 just increase m
+else part 
+swap(arr(m),arr(h))
+decrease h;
+
+class Main {
+      static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    public static void main(String[] args) {
+            int arr[]={1,0,1,0,1,2,1,0};
+            int m=0;
+            int l=0;
+            int h=arr.length-1;
+            
+            while(m<=h){
+                if(arr[m]==0){
+                    swap(arr,m,l);
+                    m++;
+                    l++;
+                }
+                else if(arr[m]==1){
+                    m++;
+                }
+                else{
+                    swap(arr,m, h);
+                    h--;
+                }
+            }
+            for (int num : arr) {
+            System.out.print(num + " ");
+        }
+        
+    }
+}
+
+-------------------------------> Collection Framework<--------------------------------------
+					   |
+					   |
+	       -------------------------------------------------
+	       |                        |                     |
+               |                        |                     | 
+	      List		       Set                   Map
+	     1)ArrayList            1)HashSet             1)HashMap
+	     2)LinkedList           2)LinkedHashSet       2)LinkedHashMap
+             3)Vector               3)TreeSet             3)TreeMap
+
+**List , Set and map this are interfaces.Rest of the things are classes ,interface contains incomplete method.
+List is order which can allow duplicate .
+Set is unorder which wan't accept duplicate .
+Map contains key value pairs 
+
+Set<Integer> values=new HashSet<>();

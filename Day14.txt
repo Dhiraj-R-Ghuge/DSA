@@ -1,0 +1,66 @@
+Search the array 
+linear search
+
+*****Binary search****
+Array shold be sorted 
+To reduce time complexity well searching we have to use binary search
+in binary search will get resulting (logn) time complexity
+Step 1:
+initialize L pointer as 0 R pointer as n-1 run the loop from L to R break the loop and L and R crosses each other 
+
+Find the middle value  (L+R/2) compare middle element to the target  is it equal return middle value
+
+if middle value is smaller to the target it means definatly will don't get element in left portion 
+so right pointer will remain same rest have to move to left pointer mid +1
+
+middle value is greater so we cant get element in right portion so left pointer remain same we have to move right to pointer mid -1
+
+question
+in a given array find the target element 
+
+
+class Main {
+    static int binary(int []num,int target){
+        int n=num.length;
+        int left=0;
+        int rigth=n-1;
+        
+        
+        while(left<rigth){
+             int mid = left + (rigth - left) / 2; 
+            if(num[mid]== target){
+                return mid;
+            }
+            if(num[mid]<target){
+                left=mid+1;
+            }
+            else{
+                rigth=mid-1;
+            }
+        }
+            return num.length;
+        }
+    
+    public static void main(String[] args) {
+        int []arr={1,2,3,4,5};
+        int target=5;
+        
+        int res=binary(arr,target);
+        System.out.println(res);
+  if (res != -1) {
+            System.out.println("Target found at index: " + res);  // Output the index if found
+        }
+   
+    }
+}
+
+
+[7,8,1,2,3,4,5,6]
+target =7
+step 1
+initialize l and r for 0 and n-1 run the loop from l to r
+we have to find which half is sorted for that if array of mid is smaller to the (arr < l) it means right half is sorted and if target lies in between array of l and array mid 
+it means element present in left half left pointer will remain same right pointer will remain same else element present in right half 
+right pointer will remain same
+
+step 2 if array of mid is greater to array ARRAY OF L left array is sorted and if target lies in between arr r and arr mid igt means element lies right half

@@ -1,0 +1,59 @@
+subarray      subset     subsequence   substring  (0 false ,1 true)
+[1,2] 1		[1,2] 1	   [a,b] 1	[a,b] 1
+[1,3] 0		[1,3] 1	   [b,c] 1	[b,c] 1
+[2,3] 1		[2,1] 0	   [a,c] 1	[a,c] 0
+[3,2] 0		[2,3] 1	   [c,a] 0	[c,a] 0
+
+1)SubArray :-
+subarray is contains from first to next element in order there is no breaking it like 1,3
+
+2)subset :-
+subset is contains mixing of string but next element is always greater than first element
+
+3)subsequence:-
+subsequence is contains in order like array abc
+
+4)substring:-
+substring is is only next adjecnt order is there is no like a to c
+
+
+****************************************Greedy Algorithm ***********************************
+major three types of problem
+N meetinghs in room
+job scheduling
+0/1 fractional knapsack 
+
+
+Problem 
+Input N=4,jobs={(1,4,20),(2,1,10),(3,1,40),(4,1,30)}
+Output:2 60
+Explanation : The 3rd job with a deadline 1 Iis performed during first time.
+first job is the Second unit of time as deadline is 4
+Profit=40+20=60
+
+
+
+0/1 fractional knapsack 
+Input n=3 ,w =50 ,values [] ={100,60,120},weigth[]={20,10,30}.
+output:240.00
+Explanation : the first and second time                         while only 20 units if the third items is taken.total value-100+60+80=240.00
+
+
+
+reschedule meeting leetcode 3440
+start={1,3,0,5,8,5} end={2,4,5,7,9,9}
+creating like mapping [(1,2),(3,4),(0,5),(5,7),(8,9),(5,9)]
+do custom sorting with compare Ascending 
+End time of current meet <{t.of next meet}
+
+
+
+
+0/1 ------>
+[100,60,120] ,[20,10,30]  c=50
+for 1kg (5,6,4)
+we creating triplet of problem 
+{(100,20,5),(60,10,6),(120,30,4)}
+[(60,10,6) ,(100,20,5),(120,30,4)]
+
+60+100+80=240 

@@ -1,0 +1,9 @@
+majority element 
+From the given array assume that starting array of the index of the array is my majority element compare rest of the element if got same value increase the count ,if different the value then decrease the count 
+counter become 0 it means till now we have and see majority element again select the new target element ,the very next element is your target element at the end of for loop if counter is more than 0 it means there is a majority element.
+Taking that  target value count how many times the element repeated in array counter is greater by 
+
+
+Step 1:
+create a set run a loop take the value from array and push  into  the set using insert method 
+start iterating set values we have to find whether the element is starting or not by decreasing the value and checking the value is there is not in set if you got stating value then start comparing .
