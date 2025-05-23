@@ -1,0 +1,28 @@
+leetcode solving question number 153
+class Solution {
+    public int findMin(int[] nums) {
+        int left=0 , right=nums.length-1; 
+        while(left<right){
+            int mid=left+(right-left)/2;
+            if(nums[mid]>nums[right]){
+                left=mid+1;
+            }
+            else{
+                right=mid;
+            }
+        }
+        return nums[left];
+    }
+}
+Prefix sum example (930)
+input :nums[1,0,1,0,1],goal =2
+output:4
+the 4 subarrays are bolded and underlined below
+[1,0,1,0,1]=101
+[1,0,1,0,1]=1010
+[1,0,1,0,1]=0101
+[1,0,1,0,1]=101
+
+
+question 1752,930,1248
+
