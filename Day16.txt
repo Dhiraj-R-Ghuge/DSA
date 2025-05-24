@@ -1,0 +1,37 @@
+Maximum Product of subarray element 
+ int[] arr = {2, 3, -4, 6}; output =6
+start your product variable with 2
+In the subarray if you have even +ve number product will be positive.
+If you have odd -ve number product will be negative
+in the subarray atleast 0 start with your product variable with 1
+if you have negative value the product of prefix element will be positive 
+product of suffix value element will be positive
+initialize maximum variable extreme native
+
+
+public class MaxSubarray {
+    public static int maxSubArray(int[] nums) {
+        int n=nums.length;
+        int pref=1;
+        int suff=1;
+        int ans=Integer.MIN_VALUE;
+        for(int i=0; i<n; i++){
+            if(pref ==0) pref=1;
+            if (suff==0) suff=1;
+            pref *=nums[i];
+            suff *=nums[n -i -1];
+            ans=Math.max(ans,Math.max(pref,suff));
+        }
+        return ans;
+    }
+        
+
+
+    public static void main(String[] args) {
+        int[] arr = {2, 0, -5, 6,8 ,9,0,-5,5};
+        System.out.println("Maximum subarray sum is: " + maxSubArray(arr));
+    }
+}
+
+problem no 88,4,56,15,229,6 all problem solve by left side
+problem  no 1358,875,424,162,1011 
