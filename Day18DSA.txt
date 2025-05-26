@@ -1,0 +1,129 @@
+-----------------------Data Structure and Algorithm--------------------------
+*Data Structure *
+1)Linked List
+2)Stack & Queue
+3)Trees
+4)Graphs
+5)Heaps
+
+*Algorithms*
+1)Sorting 
+2)Searching
+3)Greedy Algorithm
+4)Dynamic Programming 
+
+Time Complexity points
+1)Ignore Smaller
+2)Focus on worst case
+3)Ignore Constants 
+
+Step 1 : we      contains two for loop to get
+step 2 : we can 1 more for loop to get 
+step 3 : we write the in constant time than time and if we analyze the code time complexity will be n^2 step1
+
+1)Best case 
+2)Average case 
+3)Worst case 
+Getting the output in maximum time best case will be denoted by o(1).
+Average of best and worst case is average case
+
+Space Complexity:
+if we use any extra space for solving the problem that extra space will consider as best complexity 
+
+Linear Data structure                         Non linear Data structure 
+Linked list 					Trees
+						Graphs
+						heaps
+
+**Linked List**
+Collection of similar type of data in random allocation
+this array 1->2->3->4
+store like 3->1->->4
+this is random storing linked list
+
+**Single Linked List **
+A singly linked list is a linear data structure where elements, called nodes, are linked together sequentially.
+Major advantage of singly linked list Faster insertion and deletion 
+circular linked list : the staring and ending point is same is circular 
+
+in linked list  we have to store the data as well as address , we don't have any data type which can store address and data
+
+we create a class the class name is node declared two variables.
+class Node{
+int data;
+node next;
+}
+
+Node(int data){
+this.data=data;
+this.next=null;
+}
+
+Node(int data ,Node next){
+this.data=data;
+this.next=next;
+}
+we have two possibility single node and last node
+so we if we want create object you want to call the constructor which will give the output in this two forms at the first form the node should be created with data and address null further we have to create constructor which help to create node the data address null 
+first constructor 
+write for form 2
+
+Node(int data){
+this.data=data;
+this.next=null;
+}
+
+
+write the second constructor 
+
+
+Node(int data ,Node next){
+this.data=data;
+this.next=next;
+}
+
+
+this creating of linked list 
+class Node{
+    int data;
+    Node next;
+    
+    Node(int data1){
+        this.data= data1;
+        this.next = null;
+    }
+    Node(int data1,Node next1){
+        this.data = data1;
+        this.next = next1;
+    }
+}
+class Main {
+    static Node convertArrayToLinkedlist(int[] arr){
+        Node head = new Node(arr[0]);
+        Node current = head;
+        for(int i =1;i<arr.length;i++){
+            Node temp = new Node(arr[i]);
+            current.next = temp;
+            current = temp;
+        }
+        return head;
+    }
+    static void print(Node head){
+        Node temp = head;
+        while(temp!=null){
+            System.out.print(temp.data + ((temp.next!= null) ? "->" :"null"));
+            temp = temp.next;
+        }
+    }
+    
+    public static void main(String[] args) {
+        int[] arr ={1,2,3,4,5};
+        Node head = convertArrayToLinkedlist(arr);
+        print(head);
+    }
+}
+1->2->3->4->5null
+
+
+
+
