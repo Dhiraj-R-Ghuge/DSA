@@ -1,0 +1,227 @@
+OOP Example:
+class A{
+    static void method1(){
+         System.out.println("Hello");
+        
+    }
+    void method2(){
+         System.out.println("Hi guys");
+    }
+}
+class B extends A{
+    static void method3(){
+         System.out.println("This is impact training");
+         
+    }
+    static int method4(int a,int b){
+        return a+b;
+    }
+    
+}
+
+class Main {
+    public static void main(String[] args) {
+        A.method1();
+        A objA=new A();
+        objA.method2();
+        B.method1();
+        B.method3();
+       int r= B.method4(5,6);
+       System.out.println(r);
+    
+        // System. out. println (A.method1());
+    }
+}
+Hirarchichal  example
+
+class A{
+    static void method1(){
+         System.out.println("Hello");
+        
+    }
+   
+}
+class B extends A{
+  
+    
+}
+class c extends A{
+    
+}
+
+class Main {
+    public static void main(String[] args) {
+        // A.method1();
+        // A objA=new A();
+        // objA.method2();
+        B.method1();
+        c.method1();
+       
+       
+    
+        // System.out.println(A.method1());
+    }
+}
+class A{
+       int method1(int a,int b){
+      return a+b;
+  }
+        
+    
+    int method1(int a,int b,int c){
+        return a+b+c;
+    }
+   
+}
+
+class B extends A{
+  int method1(int a,int b){
+        return a-b;     
+  }
+    
+}
+
+Example of polymorphism 
+class Main {
+    public static void main(String[] args) {
+        // A.method1();
+        // A objA=new A();
+        // objA.method2();
+        A obj1=new A();
+        B obj =new B();
+       int a= obj1.method1(5,5);
+    int b=obj.method1(5,5);
+    int c=obj.method1(5,5,5);
+    System.out.println(a);
+        System.out.println(b);
+            System.out.println(c);
+       
+       
+    
+        // System.out.println(A.method1());
+    }
+}
+
+
+
+		public		private 	protected 	default
+within class	 true 		 true		   true          true
+
+within fie	 true 		false	           true 	 true
+
+within package	 true 	        false		   true		 true
+
+outside package  true		false	           true		false
+
+parent class     true           false		   false	 false
+
+child class      true 		false		   true          false
+
+
+
+P ------>F1---------------->c1 ------>M1 ------>S1
+  |		|		|	   |---->s2
+  |		|		|---->M2
+  |		|---------->c2------>M3
+  |				|--->M4
+  |
+   ------>F2---------->c3
+		|
+		 ------->c4
+
+
+abstract Points ********
+First point if  a method is incomplete, incomplete in the sense method contains  3 statement declaration ,definition , calling if definition  is missing it means method is incomplete
+if are all incomplete method have to mention  see the abstract method 
+if class contains abstract method then have to mention abstract keyword before the class.
+if we want to use abstract method we have to extend that abstract class to  child class 
+in child class we have to define that abstract method  and  creating object for the child class then we call the abstract method
+
+interface contains only abstract method 
+
+
+interface A{
+     public int method1(int a,int b);
+     public int method1(int a,int b);
+  
+}
+class B implements A{
+    public int method1(int a,int b){
+        return a-b;
+    }
+   public  int method2(int c,int d){
+        return c*d;
+    }
+}
+class Main{
+public static void main(String[]args){
+    B obj2=new B();
+    
+}
+}
+
+
+Koko eating banana :
+first step : whatever the value at the 1 
+set the element till max in the max run the loop from 0 to max 
+initialize pointer is 0 
+get the middle value  divide the array elements get the c value 
+add all those ceil value and compare with target hours if it is less than or equal to eliminate right half change the right pointer to mid - 1
+if the sum  is greater than to the target  eliminate left half change left point to mid + 1
+return arr[left]  .......
+
+
+----------------------------------->Object oriented programming <---------------------------
+         
+Four main pillars
+Inheritance
+Polymorphism
+Abstraction
+Encapsulation
+
+and to achieve those property the prerequirement 
+class ,object ,constructor & interface
+class ----->class is an virtual entity and blueprint
+object ---->instance of class ,we can call method which one present in the particular class by creating for that particular class 
+constructor -->initializing the object  
+two types 
+default constructor and parameterized constructor 
+for every class there will be default backbencher just like for  every class default constructor
+
+parameterized constructor-- for every class there will be unfortunate first benches calling them (attendance, marks) and the constructor called parameterized constructor
+
+Inheritance : So 5 types
+Single ,Multiple, Multilevel , hierarchical, hybrid
+
+Single inheritance : the property are inherited to child class from parent class.
+
+Multilevel Inheritance : properties are inherited to parent class from grand parent class and properties are inherited to child class from parent class .
+
+Multiple inheritance: properties are inherited from multiple parent class 
+
+hierarchy inheritance : properties are inherited to multiple chain classes 
+
+2)Polymorphism : same Method appearing multiple times .
+Method overloading --> multiple method same name different parameter
+Method overriding  --> in child class if a declared a method which one present in parent class same method name same parameter 
+
+Main method can be overridden with different parameter 
+using extend keyword we can inherit properties from class
+using implement keyword we can inherit properties from interface
+
+3)encapsulation --> Binding method and data hiding sensitive data this called sensitive data 
+if the variable are private we cant access outside the class 
+if you want to access we can access using method 
+
+4)Abstraction :-> Hiding implementation showing essential details
+types Data abstraction 
+functional abstraction 
+procedural abstraction
+control    abstraction
+
+if we want to make method abstract we have to use abstract keyword and if have abstract method we have to make the class should be abstract class 
+abstract method is incomplete method 
+
+interface : 
+it contains all abstract method  we cant create object for interface 
+
