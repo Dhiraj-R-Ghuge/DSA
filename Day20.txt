@@ -1,0 +1,86 @@
+leetcode question no
+206
+141
+142
+328
+92
+2
+19
+
+
+static Node detectingTheLoop(Node head){
+        Node fast = head;
+        Node slow = head;
+        while(fast!=null && fast.next!=null){
+            fast = fast.next.next;
+            slow = slow.next;
+            if(fast == slow){
+                return startingPointOfLoop(head,fast,slow);
+            }
+        }
+        return null;
+    }
+    static Node startingPointOfLoop(Node head,Node fast,Node slow){
+        slow = head;
+        while(fast!=slow){
+            fast = fast.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
+    
+    static int countingNodesInLoop(Node fast,Node slow){
+        int c=1;
+        fast = fast.next;
+        while(fast!=slow){
+            fast= fast.next;
+            c++;
+        }
+        return c;
+    }
+    static Node deleteingTheLoop(Node head,Node fast,Node slow){
+        slow = head.next;
+        while(fast!=slow){
+            fast = fast.next;
+            slow = slow.next;
+        }
+        fast.next = null;
+    }
+
+
+328==
+static Node oddAndEven(Node head) {
+    Node temp = head;
+    Node oddStart = null, oddEnd = null;
+    Node evenStart = null, evenEnd = null;
+
+    while (temp != null) {
+        if (temp.data % 2 == 0) {
+            if (evenStart == null) {
+                evenStart = temp;
+                evenEnd = evenStart;
+            } else {
+                evenEnd.next = temp;
+                evenEnd = temp;
+            }
+        } else {
+            if (oddStart == null) {
+                oddStart = temp;
+                oddEnd = oddStart;
+            } else {
+                oddEnd.next = temp;
+                oddEnd = temp;
+            }
+        }
+        temp = temp.next; 
+    }
+
+    if (oddStart == null) return evenStart;
+    if (evenStart == null) return oddStart;
+
+
+    oddEnd.next = evenStart;
+    evenEnd.next = null; 
+
+    return oddStart;
+}
