@@ -1,0 +1,53 @@
+Non linear Data structure
+Tree ,Graph, Heap
+
+Tree :
+Tree acyclic graph,(we don't form cycle)
+Tree is subset of graph,
+Tree creation : We have to create a node which contains data as well as left and right pointer.
+Starting node is called root node eventually every node is root node whatever node to be added to the root node will call as child node.
+Type of tree:
+   		1)N -array tree
+		2)Binary tree
+-----------------------------------------------------------------------------
+N-array Tree : 			    |	Binary Tree:
+n node will be attach  to the root  | 	at max two child node can be added
+node 			 	    |	to the root node
+N array tree example		    |	example
+best example is Tries		    |	binary search tree
+				    |	Avl Tree & Red-Black Tree
+				    |	Segement Tree
+-----------------------------------------------------------------------------
+To travel from root node to last node(leaf node)
+We have two ways of traversal
+Depth first search & Breadth first search
+
+DFS:-DFS have 3 types if traversal 1)Preorder 2)In Order 3)Post Order 
+Pre Order - Root , left, Right.
+In Order -  left, Root, Right.
+Post Order -left, Right , Root.
+
+1)Complete Binary Tree 
+2)Full Binary Tree 
+3)Perfect Binary  Tree
+
+3)Every node filled Every  node should contain two  child node
+2)Every node sholud be filled A full binary tree is a binary tree where every node has either exactly zero or exactly two children
+1)Every level shuold be filled and the node should start from left to rigth
+
+
+Binary Search Tree 
+left < root< right
+For bst if we print inorder traversal will get the output in sorted strucutre
+Balanced tree - Height of left tree - heigth of right tree = -1 ,0,+1 then we call balanced tree 
+
+AVL Tree:Avl tree is self balancing tree 4 types 
+1)left-left 
+2)right-right
+3)left-right
+4)right-left
+
+Segment Tree 
+in an array if we want to get the sum of a particular range value will use the simple for loop and there time complexity O(n)  and we want to get output in log(n)
+
+will use segment tree to get the target output in log(n) time complexity 
