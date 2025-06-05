@@ -1,0 +1,131 @@
+Segment Tree:(logn) time complexity
+  somewhere update your segment tree 
+
+Heaps:Heap data strucutre will store the data in array will be stored by tree and the value will be arrays by trees.
+with the help by complete binary tree arrays will accordingly
+with the help of priority queue heap sort created 
+as the data storing in array for heap 
+as tree got involed diffenatly it comes under non linear data strucutre :
+        bottom to top approach
+        top to bottom 
+
+N array tree :
+Tries:
+we have to create a node  which can store character 26 
+booelan flag ; ,Node next; the last node need to change the flag toward to true;
+Advantage :-We get the faster retravel os the string.
+
+binary tree
+import java.util.Scanner;
+
+class BinaryTree {
+    static class Node {
+        int value;
+        Node left;
+        Node right;
+
+        public Node(int value) {
+            this.value = value;
+        }
+    }
+
+    public BinaryTree() {
+    }
+
+    private Node root;
+
+    public void populate(Scanner in) {
+        System.out.println("Enter the root value:- ");
+        int value = in.nextInt();
+        root = new Node(value);
+        populate(in, root);
+    }
+
+    public void populate(Scanner in, Node node) {
+        System.out.println("Do you want to Enter the left of root value:- " + node.value);
+        boolean left = in.nextBoolean();
+        if (left) {
+            System.out.println("Enter the left value of " + node.value);
+            int value = in.nextInt();
+            node.left = new Node(value);
+            populate(in, node.left);
+        }
+
+        System.out.println("Do you want to Enter the right of root value:- " + node.value);
+        boolean right = in.nextBoolean();
+        if (right) {
+            System.out.println("Enter the right value of " + node.value);
+            int value = in.nextInt();
+            node.right = new Node(value);
+            populate(in, node.right);
+        }
+    }
+
+    public void display() {
+        display(root, "");
+    }
+
+    private void display(Node node, String indent) {
+        if (node == null) {
+            return;
+        }
+        System.out.println(indent + node.value);
+        display(node.left, indent + "\t");
+        display(node.right, indent + "\t");
+    }
+
+
+    public void preOrder() {
+        System.out.print("Pre-order: ");
+        preOrder(root);
+        System.out.println();
+    }
+
+    private void preOrder(Node node) {
+        if (node == null) return;
+        System.out.print(node.value + " ");
+        preOrder(node.left);
+        preOrder(node.right);
+    }
+
+
+    public void inOrder() {
+        System.out.print("In-order: ");
+        inOrder(root);
+        System.out.println();
+    }
+
+    private void inOrder(Node node) {
+        if (node == null) return;
+        inOrder(node.left);
+        System.out.print(node.value + " ");
+        inOrder(node.right);
+    }
+
+    public void postOrder() {
+        System.out.print("Post-order: ");
+        postOrder(root);
+        System.out.println();
+    }
+
+    private void postOrder(Node node) {
+        if (node == null) return;
+        postOrder(node.left);
+        postOrder(node.right);
+        System.out.print(node.value + " ");
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        BinaryTree tree = new BinaryTree();
+        tree.populate(in);
+        tree.display();
+
+
+        tree.preOrder();
+        tree.inOrder();
+        tree.postOrder();
+    }
+}
+
+
