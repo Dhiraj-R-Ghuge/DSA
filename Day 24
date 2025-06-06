@@ -1,0 +1,55 @@
+Segment tree :
+[5,4,3,2,1]
+                (15)
+                0-4  
+                /  \
+              (12)   (3)
+              0-2    3-4
+              /\        /\
+            (9) (3)  (2)   (1)
+          0-1   2-2   3-3   4-4
+          /\
+        (5) (9)
+        0-0  1-1
+
+gettind middle value
+import java.util.*;
+
+public class Main {
+    static class Node {
+        int val;
+        Node left, right;
+        Node(int value) {
+            this.val = value;
+            left = right = null;
+        }
+    }
+
+    static void bfs(Node root) {
+        if (root == null) return;
+
+        Queue<Node> queue = new LinkedList<>();
+        queue.offer(root);
+
+        while (!queue.isEmpty()) {
+            Node current = queue.poll();
+            System.out.print(current.val + " ");
+
+            if (current.left != null) queue.offer(current.left);
+            if (current.right != null) queue.offer(current.right);
+        }
+    }
+
+    public static void main(String[] args) {
+        Node root = new Node(1);
+        root.left = new Node(2);
+        root.right = new Node(3);
+        root.left.left = new Node(4);
+        root.left.right = new Node(5);
+        root.right.right = new Node(6);
+
+        System.out.println("Level Order Traversal:");
+        bfs(root);
+    }
+}
+level order example
