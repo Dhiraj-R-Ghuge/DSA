@@ -47,6 +47,21 @@ AVL Tree:Avl tree is self balancing tree 4 types
 3)left-right
 4)right-left
 
+BFS:-Level order traversal
+class levelorder{
+    static void bfs(Node root){
+        if(root==null) return;
+        Queue<Node>queue=new LinkedList<>();
+        queue.offer(root);
+        while(!queue.isEmpty()){
+            Node current=queue.poll();
+              System.out.print(current.val + " ");
+            if (current.left != null) queue.offer(current.left);
+            if (current.right != null) queue.offer(current.right);
+        }
+    }
+example
+
 Segment Tree 
 in an array if we want to get the sum of a particular range value will use the simple for loop and there time complexity O(n)  and we want to get output in log(n)
 
