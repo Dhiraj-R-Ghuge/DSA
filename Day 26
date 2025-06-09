@@ -1,0 +1,41 @@
+segemnt tree :
+
+class SegmentTree{
+    class Node{
+        int data;
+        Node left;
+        Node right;
+        int startIndex;
+        int endIndex;
+        Node(int data1,int startIndex)
+        
+    }
+    private Node roor;
+    static createTree(){
+        root=helperTree();
+    }
+    static Node helperTree(int[]arr,int startIndex,int endIndex){
+        if(start ==end){
+            Node leaf=new node();
+            lead.data=arr[start];
+            return;
+        }
+        startIndex=0;
+        endIndex=arr.length-1;
+        int mid=startIndex+endIndex/2;
+        Node.left=helperTree(arr,startIndex,mid);
+        Node.right=helperTree(arr,mid+1,endIndex);
+        Node.data=Node.left.data+Node.right.data;
+    }
+    static void query(int inputLeft,int inputRight){
+        if(startIndex>inputLeft|| endIndex<inputRight){
+            return 0;
+        }
+        else if(startIndex<=inputLeft&& endIndex>=inputRight){
+            return node.data;
+        }
+        else{
+            return this.query(node.left,inputLeft,inputright)+this.query(node.right,inputLeft,inputRight);
+        }
+    }
+}
